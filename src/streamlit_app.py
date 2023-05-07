@@ -36,8 +36,8 @@ def main():
 
     col1, padding, col2 = st.columns([5,2,10],)
 
-    col1.write("\n\n")
-    col2.write("\n\n\n\n")
+    col1.write("\n")
+    col2.write("\n\n\n")
 
     stock_name = st.text_input("Stock Name/Ticker")
 
@@ -52,7 +52,7 @@ def main():
             response = response.replace('Could not parse LLM output: ', '')
         
         with col1:
-            st.image(os.path.join(img_path, 'stock_senpai.jpg'), width=250, caption='Generated with MidJourney')
+            st.image(os.path.join(img_path, 'stock_senpai.jpg'), width=300, caption='Generated with MidJourney')
             # st.image('../data/img/stock_Sensei.jpg', width=250, caption='Generated with MidJourney')
         
         with col2:
