@@ -55,12 +55,15 @@ Here, the prompt is essentially what would otherwise be code. Based on instructi
 
 ## Known Issues and Bugs
 - Sometimes the output returned will be only one line long, even less
+
 *Solution:*: For now, the model seems to sometimes skip the instructions in the prompt and immediately provide a rating without its analysis. Rerunning the model should help alleviate this, and produce more wholistic output.
 
 - Sometimes the output returned will be incomplete, returning an 'Action' instead of a formal output
+
 *Solution:*: This could be due to model hallucination, or LangChain parsing not being fully supportive of GPT and conversational models yet. Rerunning the model should help alleviate this.
 
 - Sometimes the output returned will be in LaTEX font and misspaced
+
 *Solution:*: WIP
 
 ## Future goals and features
