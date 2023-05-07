@@ -17,19 +17,18 @@ spinner_texts = [
 img_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..', 'data', 'img')
 
 def main():
-    st.title("⚔ Stock Senpai ⚔")
-    st.write("Enter a stock name and press submit to get Stock Senpai's verdict.")
+    st.title("⚔ Stock Sensei ⚔")
+    st.write("Enter a stock name and press submit to get Stock Sensei's verdict.")
 
     footer_content = '''
     **DISCLAIMER**: 
-    \nStock Senpai is an AI tool built using LangChain and OpenAI's GPT-3.5-Turbo API.
-    \nThe stock ratings and information provided by Stock Senpai are for informational purposes only, and should not at all be considered professional financial advice.
+    \nStock Sensei is an AI tool built using LangChain and OpenAI's GPT-3.5-Turbo API.
+    \nThe stock ratings and information provided by Stock Sensei are for informational purposes only, and should not at all be considered professional financial advice.
     \nThere is no guarantee of accuracy, and I will not be liable for any losses or taxes you incur. Always seek professional advice when deciding on trading.
-    \nStock Senpai is an independent project, and is not affiliated with any companies or financial institutions.
+    \nStock Sensei is an independent project, and is not affiliated with any companies or financial institutions.
     \nPlease do not be silly :smile:
+    \n Created by Shivam Garg
     '''
-
-
 
     col1, padding, col2 = st.columns([5,3,10],)
 
@@ -50,10 +49,10 @@ def main():
         
         with col1:
             st.image(os.path.join(img_path, 'stock_senpai.jpg'), width=250, caption='Generated with MidJourney')
-            # st.image('../data/img/stock_senpai.jpg', width=250, caption='Generated with MidJourney')
+            # st.image('../data/img/stock_Sensei.jpg', width=250, caption='Generated with MidJourney')
         
         with col2:
-            st.write(response)
+            st.markdown(response)
 
 
 # Run the app
