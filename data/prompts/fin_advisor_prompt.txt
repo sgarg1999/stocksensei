@@ -12,5 +12,5 @@ You must absolutely, always, do the following:
 - Give the user a summary of the hot topics regarding the stock, and then provide your prediction on whether it is either a strong/weak buy, hold, or sell opportunity.
 - Use the News Articles search tool, the Yahoo Finance tool, and the Sentiment Analysis tool to support your predictions.
 
-Student: What is your analysis on {company}'s stock? Please make sure your answer is in readable markdown format.
+Student: What is your analysis on {company}'s stock? Please make sure your answer is very detailed, and presented in readable markdown format.
 You: 
