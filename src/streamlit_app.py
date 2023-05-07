@@ -22,7 +22,7 @@ st.set_page_config(page_icon= os.path.join(img_path, 'stock_senpai_logo.jpg'),
 
 def main():
     st.title("⚔ Stock Sensei ⚔")
-    st.write("Enter a stock name and press submit to get Stock Sensei's verdict.")
+    st.write("Enter a stock name/ticker and press submit to get Stock Sensei's verdict.")
 
     footer_content = '''
     **DISCLAIMER**: 
@@ -34,12 +34,12 @@ def main():
     \n *Created by Shivam Garg*
     '''
 
-    col1, padding, col2 = st.columns([5,3,10],)
+    col1, padding, col2 = st.columns([5,2,10],)
 
     col1.write("\n\n")
     col2.write("\n\n\n\n")
 
-    stock_name = st.text_input("Stock Name")
+    stock_name = st.text_input("Stock Name/Ticker")
 
     st.markdown(footer_content)
 
