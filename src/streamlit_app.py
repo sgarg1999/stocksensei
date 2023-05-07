@@ -1,6 +1,8 @@
 from app import inference_pipeline
 import random
 
+import os
+
 import streamlit as st
 
 
@@ -11,6 +13,8 @@ spinner_texts = [
     'I really need to upgrade my internet...',
     'So... whats in this for me?'
 ]
+
+img_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..', 'data', 'img')
 
 def main():
     st.title("⚔ Stock Senpai ⚔")
@@ -45,7 +49,9 @@ def main():
             response = response.replace('Could not parse LLM output: ', '')
         
         with col1:
-            st.image('../data/img/stock_senpai.jpg', width=250, caption='Generated with MidJourney')
+            st.image(os.path.join(img_path, 'stock_senpai.jpg', width=250, caption='Generated with MidJourney'))
+            # st.image('../data/img/stock_senpai.jpg', width=250, caption='Generated with MidJourney')
+        
         with col2:
             st.write(response)
 
