@@ -22,7 +22,7 @@ st.set_page_config(page_icon= os.path.join(img_path, 'stock_senpai_logo.jpg'),
 
 def main():
     st.title("⚔ Stock Sensei ⚔")
-    st.write("Enter a stock name/ticker and press submit to get Stock Sensei's verdict.")
+    st.write("Enter a stock name/ticker and press Submit to get Stock Sensei's verdict.")
 
     footer_content = '''
     **DISCLAIMER**: 
@@ -31,6 +31,8 @@ def main():
     \nThere is no guarantee of accuracy, and I will not be liable for any losses or taxes you incur. 
     \nAlways seek professional advice when deciding on trading.
     \nStock Sensei is an independent project, and is not affiliated with any companies or financial institutions.
+    \nUse of this tool implies that you agree to these conditions.
+    \n---
     \n *Created by Shivam Garg*
     '''
 
@@ -43,12 +45,10 @@ def main():
 
     st.markdown(footer_content)
 
-
     if st.button("Submit"):
-
-        with st.spinner(text = random.choice(spinner_texts)):
+        
+        with st.spinner(text = ("*Sensei says: *" + random.choice(spinner_texts))):
             response = inference_pipeline(stock_name)
-            
             response = response.replace('Could not parse LLM output: ', '')
         
         with col1:
@@ -56,7 +56,7 @@ def main():
             # st.image('../data/img/stock_Sensei.jpg', width=250, caption='Generated with MidJourney')
         
         with col2:
-            st.markdown(response)
+            st.markdown("*Sensei says: *" + response)
 
 
 # Run the app
