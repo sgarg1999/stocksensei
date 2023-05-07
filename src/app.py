@@ -37,8 +37,6 @@ def inference_pipeline(input_stock_name):
 
     if print_logs:
         print("Fetching OpenAI Token...")
-    openai.api_key = os.environ["OPENAI_API_KEY"]
-
     #------------------------------------------------------------------------------------
     # Initialize Model
     #------------------------------------------------------------------------------------
@@ -48,7 +46,7 @@ def inference_pipeline(input_stock_name):
     llm = init_gpt()
 
     if print_logs:
-        print("Model loaed")
+        print("Model loaded")
 
     #------------------------------------------------------------------------------------
     # Initialize Tools

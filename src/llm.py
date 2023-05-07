@@ -4,6 +4,9 @@ from langchain.agents import initialize_agent
 
 from utils.loading_utilties import get_openai_token
 
+import openai
+import os
+
 
 temperature = 0.5
 open_ai_token = get_openai_token
@@ -13,7 +16,7 @@ def init_gpt(temperature = 0.5,
              open_ai_token= open_ai_token,
              verbose = True):
 
-  open_ai_token = get_openai_token()
+  openai.api_key = os.environ["OPENAI_API_KEY"]
 
   llm = ChatOpenAI(temperature=temperature,
                 verbose = verbose,
