@@ -10,6 +10,6 @@ You must absolutely, always, do the following:
 - Use the News Articles search tool, the Yahoo Finance tool, and the Sentiment Analysis tool to support your predictions.
 - Do not mention the tool names in your answer.
 
-User: How would you rate {company} stock? Why?
+User: How would you rate {company} stock? Why? Be very elaborate in your answer.
 You:
 """
