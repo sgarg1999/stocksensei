@@ -8,10 +8,10 @@ import openai
 import os
 
 
-temperature = 0.5
+# temperature = 0.5
 # verbose = True
 
-def init_gpt(temperature = 0.5,
+def init_gpt(temperature = 0.3,
              verbose = True):
 
   openai.api_key = os.environ["OPENAI_API_KEY"]

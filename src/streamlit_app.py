@@ -16,6 +16,10 @@ spinner_texts = [
 
 img_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..', 'data', 'img')
 
+st.set_page_config(page_icon= os.path.join(img_path, 'stock_senpai.jpg'),
+                   page_title= "⚔ Stock Sensei ⚔",
+                   layout='wide')
+
 def main():
     st.title("⚔ Stock Sensei ⚔")
     st.write("Enter a stock name and press submit to get Stock Sensei's verdict.")
@@ -27,7 +31,7 @@ def main():
     \nThere is no guarantee of accuracy, and I will not be liable for any losses or taxes you incur. Always seek professional advice when deciding on trading.
     \nStock Sensei is an independent project, and is not affiliated with any companies or financial institutions.
     \nPlease do not be silly :smile:
-    \n Created by Shivam Garg
+    \n *Created by Shivam Garg*
     '''
 
     col1, padding, col2 = st.columns([5,3,10],)
