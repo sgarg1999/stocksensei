@@ -1,11 +1,9 @@
-from utils.loading_utilties import get_openai_token
-
-from langchain import PromptTemplate
-from langchain.chains import LLMChain
-
 from llm import init_gpt, init_agent
 from tools import init_tools
 from load_prompts import load_prompt_template, generate_prompt_obj
+import os
+import openai
+
 
 
 import nltk
@@ -39,7 +37,8 @@ def inference_pipeline(input_stock_name):
 
     if print_logs:
         print("Fetching OpenAI Token...")
-       
+    openai.api_key = os.environ["OPENAI_API_KEY"]
+
     #------------------------------------------------------------------------------------
     # Initialize Model
     #------------------------------------------------------------------------------------
@@ -119,7 +118,7 @@ def inference_pipeline(input_stock_name):
     while True:
          attempt+=1
          print("Hmm, lets try that again... (attempt {} of 3)".format(attempt))
-         
+
          if attempt <= 3:
             final_answer = generate_response(zero_shot_agent,
                                             prompt=prompt)
