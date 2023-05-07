@@ -47,7 +47,7 @@ def main():
 
     if st.button("Submit"):
         
-        with st.spinner(text = ("*Sensei says: *" + random.choice(spinner_texts))):
+        with st.spinner(text = (random.choice(spinner_texts))):
             response = inference_pipeline(stock_name)
             response = response.replace('Could not parse LLM output: ', '')
         
@@ -56,7 +56,7 @@ def main():
             # st.image('../data/img/stock_Sensei.jpg', width=250, caption='Generated with MidJourney')
         
         with col2:
-            st.markdown("*Sensei says: *" + response)
+            st.markdown("Sensei says: " + response)
 
 
 # Run the app
