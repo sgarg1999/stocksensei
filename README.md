@@ -31,7 +31,7 @@ It is similar to asking ChatGPT to play a character in a conversation, the only 
 As of 7th May 2023, this is the prompt Stock Sensei is using:
 
   Financial Advisor Role:
-  
+  ```
   '''  
   You are a financial analyst that is knowledgeable about stocks and markets.
   You must research recent news for the company that the stock belongs to and comment on how this news will affect the stock price.
@@ -50,6 +50,7 @@ As of 7th May 2023, this is the prompt Stock Sensei is using:
   Student: What is your analysis on {company}'s stock? Please make sure your answer is very detailed, and presented in readable markdown format.
   You:
   '''
+  ```
 
 Here, the prompt is essentially what would otherwise be code. Based on instructions, GPT is deciding how and what to carry out. Therefore, tuning the prompt is extremely important, but can also be very tricky due to the sheer number of variables that could affect outputs.
 
