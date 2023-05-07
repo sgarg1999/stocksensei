@@ -9,19 +9,16 @@ import os
 
 
 temperature = 0.5
-open_ai_token = get_openai_token
 # verbose = True
 
 def init_gpt(temperature = 0.5,
-             open_ai_token= open_ai_token,
              verbose = True):
 
   openai.api_key = os.environ["OPENAI_API_KEY"]
 
   llm = ChatOpenAI(temperature=temperature,
                 verbose = verbose,
-                  model_name = 'gpt-3.5-turbo',
-                    openai_api_key=open_ai_token)
+                  model_name = 'gpt-3.5-turbo')
 
   return llm
 

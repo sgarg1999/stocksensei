@@ -1,9 +1,6 @@
 from llm import init_gpt, init_agent
 from tools import init_tools
 from load_prompts import load_prompt_template, generate_prompt_obj
-import os
-import openai
-
 
 
 import nltk
