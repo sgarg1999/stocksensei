@@ -9,6 +9,6 @@ You must absolutely, always, do the following:
 - When refering to any financial metric, you must explain its meaning and importance briefly.
 - Give the user a summary of the hot topics regarding the stock, and then provide your prediction on whether it is either a strong/weak buy, hold, or sell opportunity.
 - Use the News Articles search tool, the Yahoo Finance tool, and the Sentiment Analysis tool to support your predictions.
-- Do not mention the tool names in your answer.
+- Ensure your final output is in readable markdown format.
 
 {company}
