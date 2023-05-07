@@ -28,9 +28,9 @@ def main():
     **DISCLAIMER**: 
     \nStock Sensei is an AI tool built using LangChain and OpenAI's GPT-3.5-Turbo API.
     \nThe stock ratings and information provided by Stock Sensei are for informational purposes only, and should not at all be considered professional financial advice.
-    \nThere is no guarantee of accuracy, and I will not be liable for any losses or taxes you incur. Always seek professional advice when deciding on trading.
+    \nThere is no guarantee of accuracy, and I will not be liable for any losses or taxes you incur. 
+    \nAlways seek professional advice when deciding on trading.
     \nStock Sensei is an independent project, and is not affiliated with any companies or financial institutions.
-    \nPlease do not be silly :smile:
     \n *Created by Shivam Garg*
     '''
 
