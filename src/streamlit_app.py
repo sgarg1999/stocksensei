@@ -16,7 +16,7 @@ spinner_texts = [
 
 img_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..', 'data', 'img')
 
-st.set_page_config(page_icon= os.path.join(img_path, 'stock_senpai.jpg'),
+st.set_page_config(page_icon= os.path.join(img_path, 'stock_senpai_logo.jpg'),
                    page_title= "⚔ Stock Sensei ⚔",
                    layout='wide')
 
