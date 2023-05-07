@@ -49,7 +49,7 @@ def main():
             response = response.replace('Could not parse LLM output: ', '')
         
         with col1:
-            st.image(os.path.join(img_path, 'stock_senpai.jpg', width=250, caption='Generated with MidJourney'))
+            st.image(os.path.join(img_path, 'stock_senpai.jpg'), width=250, caption='Generated with MidJourney')
             # st.image('../data/img/stock_senpai.jpg', width=250, caption='Generated with MidJourney')
         
         with col2:
