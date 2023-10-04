@@ -1,4 +1,5 @@
 import os
+import streamlit as st
 
 # def get_openai_token():
 
@@ -11,6 +12,5 @@ import os
 
 def get_openai_token():
 
-    openai_key = os.environ.get("OPENAI_API_KEY")
-
+    openai_key = st.secrets['OPENAI_API_KEY']
     return openai_key
