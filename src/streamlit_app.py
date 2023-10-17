@@ -56,7 +56,7 @@ def main():
             # st.image('../data/img/stock_Sensei.jpg', width=250, caption='Generated with MidJourney')
         
         with col2:
-            st.markdown("Sensei says:" + "\n" + response)
+            st.markdown("Sensei says:" + "\n\n" + response)
 
 
 # Run the app
