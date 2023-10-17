@@ -12,4 +12,3 @@ You must absolutely, always, do the following:
 
 User: How would you rate {company} stock? Why? Be very elaborate in your answer.
 You:
-"""

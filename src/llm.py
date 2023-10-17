@@ -11,10 +11,11 @@ import os
 # temperature = 0.5
 # verbose = True
 
-def init_gpt(temperature = 0.3,
+def init_gpt(temperature = 0.5,
              verbose = True):
 
-  openai.api_key = os.environ["OPENAI_API_KEY"]
+  # openai.api_key = os.environ["OPENAI_API_KEY"]
+  openai.api_key = get_openai_token()
 
   llm = ChatOpenAI(temperature=temperature,
                 verbose = verbose,

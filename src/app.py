@@ -1,7 +1,7 @@
 from llm import init_gpt, init_agent
 from tools import init_tools
 from load_prompts import load_prompt_template, generate_prompt_obj
-
+import time
 
 import nltk
 
@@ -96,34 +96,19 @@ def inference_pipeline(input_stock_name):
     #-----------------------------------------------------------------------------------
     # Run prompt
     #-----------------------------------------------------------------------------------
+    satisfactory_answer = False
 
+    while satisfactory_answer is False:
+        final_answer = generate_response(zero_shot_agent,   
+                                        prompt=prompt)
+                
+        final_answer = final_answer.replace('Could not parse LLM output: ', '')
 
-    final_answer = generate_response(zero_shot_agent,   
-                                     prompt=prompt)
-    
-    print(type(final_answer))
+        if final_answer.startswith("Question:") == True or len(final_answer.split(' ')) < 40:
+            continue
 
-    attempt = 0
-    
-    final_answer = final_answer.replace('Could not parse LLM output: ', '')
-
-    if final_answer.startswith("Question:") == False:
-        return final_answer
-    
-    while True:
-         attempt+=1
-         print("Hmm, lets try that again... (attempt {} of 3)".format(attempt))
-
-         if attempt <= 3:
-            final_answer = generate_response(zero_shot_agent,
-                                            prompt=prompt)
-            if final_answer.startswith("Question") == False:
-                return final_answer
-            
-         else:
-            return "Sorry, I am tired right now, please try again later :sad:"
-         
-    # print(final_answer)
+        else:
+            return final_answer
 
 
 
