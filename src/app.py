@@ -108,7 +108,7 @@ def inference_pipeline(input_stock_name):
         final_answer = generate_response(zero_shot_agent, prompt=prompt)
         final_answer = final_answer.replace('Could not parse LLM output: ', '')
     
-        if final_answer.startswith("Question:") or len(final_answer.split(' ')) < 40:
+        if final_answer.startswith("Question:") or len(final_answer.split(' ')) < 10:
             continue
         else:
             satisfactory_answer = True
