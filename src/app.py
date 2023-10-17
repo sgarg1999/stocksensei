@@ -1,7 +1,8 @@
 from llm import init_gpt, init_agent
 from tools import init_tools
 from load_prompts import load_prompt_template, generate_prompt_obj
-import time
+from pylatexenc.latex2text import LatexNodes2Text
+
 
 import nltk
 
@@ -24,6 +25,11 @@ def generate_response(agent, prompt):
     final_answer = response
     final_answer.replace("Thought:Could not parse LLM output: ","")
     final_answer.replace("Could not parse LLM output: ","")
+
+    # Remove LaTex elements
+    final_answer = LatexNodes2Text().latex_to_text(final_answer)
+
+
 
     return final_answer 
      
