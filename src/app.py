@@ -27,7 +27,7 @@ def generate_response(agent, prompt):
     final_answer.replace("Could not parse LLM output: ","")
 
     # Remove LaTex elements
-    final_answer = LatexNodes2Text().latex_to_text(final_answer)
+    final_answer = LatexNodes2Text(keep_comments=True).latex_to_text(final_answer)
 
 
 
