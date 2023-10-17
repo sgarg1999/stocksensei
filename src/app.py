@@ -114,6 +114,7 @@ def inference_pipeline(input_stock_name):
             continue
 
         else:
+            satisfactory_answer = True
             return final_answer
 
 
